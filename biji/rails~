@@ -1,0 +1,81 @@
+1/
+    
+
+Just add ExecJS and the Ruby Racer in your gem file and run bundle install after.
+
+gem 'execjs'
+
+gem 'therubyracer'
+
+Everything should be fine after.
+
+2/脚手架  Scaffoldingsd
+rails generate scaffold  Post  name：string  title:string  content:text
+
+
+rake db:create;rake db:migrate
+
+
+
+
+
+3
+route.rb  
+
+root :to => 'blog#index'
+
+rails  g scaffold  blog name:string
+
+
+rake db:migrate
+
+
+
+
+
+4
+
+rake db:create;rake db:migrate
+
+ 1  config/routes.rb
+
+get  "posts" => "posts#index"
+
+match  "posts", => "posts#index"
+2  controllers
+
+class PostsController < ApplicationController
+  def  index
+  end
+end
+
+3 view
+
+
+5
+rails g generate model Post title:string content:text
+
+rake db:migrate
+
+6  rails console
+
+
+ <%= link_to "hello", zxb_url %>
+ <%= link_to "hello", zxb_path %>
+
+
+
+7 views
+
+
+rails g controller posts index
+
+
+8 Routes
+
+rails g migration CreateUsers
+
+rake db:migrate
+rake db:rollback
+
+

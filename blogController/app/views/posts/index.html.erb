@@ -1,0 +1,38 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<%= render 'tagline'%>
+
+<br/>
+
+<%= link_to "HOME", '/'%>
+
+<br/>
+
+<%= add_sth 'hello'%>
+
+<br/>
+
+
+<%= form_tag("/save_the_data",:method => "post") do%>
+    <%= text_field_tag(:my_data) %>
+     <%= submit_tag("Submit")%>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
